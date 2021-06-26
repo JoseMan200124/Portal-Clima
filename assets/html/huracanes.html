@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/assets/img/nublado.png" />
+
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== SWIPER CSS ==========-->
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="/assets/css/styles.css">
+            <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <title>El clima</title>
+    </head>
+    <body>
+       <div id="loader"></div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <nav class="nav bd-container">
+                
+                 <a href="/index.html" class="logo-width">
+                <img src="/assets/img/logo.png" alt="">
+               </a>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                           <li class="nav__item"><a href="/index.html" class="nav__link">Inicio</a></li>
+                        <li class="nav__item"><a href="/assets/html/clima.html" class="nav__link">Clima</a></li>
+                        <li class="nav__item"><a href="/assets/html/nosotros.html" class="nav__link">Nosotros</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contactanos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+             <div id="huracan" class="is-loading">
+	<h1 class="text-white">
+		Temporada de huracanes
+	</h1>
+</div>
+                       <h2 class="text-center font-weight-bold my-5">Imagenes</h2>
+
+
+        <section class="slider-container">
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="/assets/img/slide1.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/slide2.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/slide3.png" alt="">
+      </div>
+      <div class="navigation">
+        <div class="btn btn-tam active"></div>
+        <div class="btn btn-tam"></div>
+        <div class="btn btn-tam"></div>
+     
+      </div>
+</div>
+             </section>
+  
+  <section>
+                 
+               <div id="waterdrop"></div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+            <a href="#"><img src="/assets/img/logo-vrip.png" alt="vrip"></a>
+            <a href="#"><img src="/assets/img/logo-landivar.png" alt="landivar"></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/assets/html/clima.html">Clima</a></li>
+                <li class="list-inline-item"><a href="/assets/html/nosotros.html">Nosotros</a></li>
+                <li class="list-inline-item"><a href="#">Herramientas</a></li>
+                <li class="list-inline-item"><a href="#">Contacto</a></li>
+            </ul>
+            <p class="copyright">Instituto de Investigación y Proyección sobre Ciencia y Teconolgía - Incyt- 2021</p>
+        </footer>
+    </div>
+  
+             </section>                         
+
+              
+              
+<script>
+      AOS.init({
+      });
+    </script>
+        <!--========== GSAP ==========-->
+        <script src="/assets/js/gsap.min.js"></script>
+
+        <!--========== SWIPER JS ==========-->
+        <script src="/assets/js/swiper-bundle.min.js"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="/assets/js/main.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+  <script>
+        
+  var loader; 
+    function loadNow(opacity){
+        if(opacity<=0){
+            displayContent(); 
+        }
+        else{
+            loader.style.opacity = opacity; 
+            window.setTimeout(function(){
+              loadNow(opacity - 0.05)  
+            }, 100);
+        }
+    }
+    function displayContent(){
+        loader.style.display = 'none'; 
+        document.getElementById('content').style.display = 'block';
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+        
+        loader = document.getElementById('loader');
+        loadNow(1); 
+    });
+
+        </script>
+
+ <script> jQuery('#waterdrop').raindrops({color:'#003863', canvasHeight:150, density: 0.1, frequency: 20});
+</script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+     
+     <script>
+        
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#huracan").removeClass("is-loading");
+	}, 100)
+});
+        
+        </script>
+           <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+    </body>
+</html>

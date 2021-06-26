@@ -60,3 +60,14 @@ function scrollAnimation(){
 
 controlImg.forEach(c => c.addEventListener('click', scrollAnimation)); 
 
+/*=========================Landing page=================================*/
+
+$(document).ready(function() {
+	setTimeout(function() {
+		$("#main").removeClass("is-loading");
+	}, 100)
+});
+
+/*==============================SLDIER DE IMAGENES==========================================*/
+
+

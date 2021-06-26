@@ -14,25 +14,27 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
             <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
 
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <title>El clima</title>
+        <title>Incyt</title>
     </head>
     <body>
        <div id="loader"></div>
         <!--========== HEADER ==========-->
         <header class="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">El clima</a>
-                
+               <a href="index.html" class="logo-width">
+                <img src="/assets/img/logo.png" alt="">
+               </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Nosotros</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">herramientas</a></li>
+                     <li class="nav__item"><a href="/index.html" class="nav__link">Inicio</a></li>
+
+                        <li class="nav__item"><a href="/assets/html/clima.html" class="nav__link">Clima</a></li>
+                        <li class="nav__item"><a href="/assets/html/nosotros.html" class="nav__link">Nosotros</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Contactanos</a></li>
                     </ul>
                 </div>
@@ -44,94 +46,13 @@
         </header>
 
         <!--========== MAIN ==========-->
-        <main class='main'>
-            <div class="swiper-container gallery-top">
-                <div class="swiper-wrapper">
-                    <!--========== ISLANDS 1 ==========-->
-                    <section class="islands swiper-slide">
-                        <img src="assets/img/fondo2.gif" alt="" class="islands__bg">
+        <div id="main" class="is-loading">
+	<h1 class="text-white">
+		Universidad Rafael Landívar
+	</h1>
+</div>
 
-                        <div class="islands__container bd-container">
-                            <div class="islands__data">
-                                <h1 class="islands__title">Informate</h1>
-                                <h2 class="islands__subtitle">Con lo más reciente</h2>
-                                <p class="islands__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nisi inventore voluptatem suscipit tempore, facere debitis omnis sapiente laudantium.</p>
-                                <a href="#" class="islands__button">Ver clima<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
-                            </div>
-
-                            <div class="islands__video">
-                                <div class="islands__video-content">
-                                    <i class='bx bx-play-circle islands__video-icon'></i>
-                                </div>
-                            </div> 
-                        </div>
-                    </section>
-        
-                    <!--========== ISLANDS 2 ==========-->
-                    <section class="islands swiper-slide">
-                        <img src="assets/img/fondo3.gif" alt="" class="islands__bg">
-
-                        <div class="islands__container bd-container">
-                            <div class="islands__data">
-                               <h1 class="islands__title">Transmición</h1>
-                                <h2 class="islands__subtitle">Totalmente en vivo</h2>
-                                
-                                <p class="islands__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aliquid possimus eum consequuntur voluptatum! Distinctio.</p>
-                                <a href="#" class="islands__button">Ver el clima<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
-                            </div>
-
-                            <div class="islands__video">
-                                <div class="islands__video-content">
-                                    <i class='bx bx-play-circle islands__video-icon'></i>
-                                </div>
-                            </div>  
-                        </div>
-                    </section>
-                    
-                    <!--========== ISLANDS 3 ==========-->
-                    <section class="islands swiper-slide">
-                        <img src="assets/img/fondo1.gif" alt="" class="islands__bg">
-
-                        <div class="islands__container bd-container">
-                            <div class="islands__data">
-                                                               <h1 class="islands__title">Lo ultimo</h1>
-
-                                <h2 class="islands__subtitle">En tecnología para el clima</h2>
-                                <p class="islands__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem aperiam sapiente quos voluptatum, libero, nihil illum quasi.</p>
-                                <a href="#" class="islands__button">Ver el clima <i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
-                            </div>
-
-                            <div class="islands__video">
-                                <div class="islands__video-content">
-                                    <i class='bx bx-play-circle islands__video-icon'></i>
-                                </div>
-                            </div>  
-                        </div>
-                    </section>
-
-                    <!--========== ISLANDS POPUP ==========-->
-                    <div class="islands__popup" id="popup">
-                        <div>
-                            <div class="islands__popup-close" id="popup-close">
-                                <i class='bx bx-x'></i>
-                            </div>
-            
-                            <iframe class="islands__popup-video" src="https://www.youtube.com/embed/emPKer_pV14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--========== CONTROLS ==========-->
-            <div class="controls gallery-thumbs">
-                <div class="controls__container swiper-wrapper">
-                    <img src="assets/img/fondo2.gif" alt="" class="controls__img swiper-slide">
-                    <img src="assets/img/fondo3.gif" alt="" class="controls__img swiper-slide">
-                    <img src="assets/img/fondo1.gif" alt="" class="controls__img swiper-slide">
-                </div>
-            </div>
-        </main>
-        
+       
         <section>
               <div class="container my-5 py-2">
         <h2 class="text-center font-weight-bold my-5">Objetivos</h2>
@@ -139,17 +60,17 @@
             <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" class="col-md-4 text-center">
                 <img src="/assets/img/objetivo1.jpg" alt="Anti-spam" class="mx-auto">
                 <h4>Informar</h4>
-                <p>Lorem ipsum dolor sit amet porro his no his deleniti</p>
+                <p>En nuestro portal podrás encontrar los datos más actualizados acerca del clima</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"class="col-md-4 text-center">
                 <img src="assets/img/objetivo2.jpg" alt="Phishing Detect" class="mx-auto">
-                <h4>Educar</h4>
-                <p>Ne error antiopam usu. Sed vocen concludaturque ea</p>
+                <h4>Innovar</h4>
+                <p>Utilizamos lo ultimo en tecnología web para brindarte la información</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" class="col-md-4 text-center">
                 <img src="assets/img/objetivo3.jpg" alt="Smart Scan" class="mx-auto">
-                <h4>Incentivar</h4>
-                <p>Et usu ocurreret elaboraret doctus prodesse assueverit.</p>
+                <h4>Enseñar</h4>
+                <p>Aprende y actualizate con tecnología de punta</p>
             </div>
         </div>
     </div>
@@ -162,10 +83,9 @@
         <div class="container my-5">
             <div class="row justify-content-between text-center text-md-left">
                 <div data-aos="fade-up" data-aos-duration="1000" class="col-md-6">
-                    <h2 class="font-weight-bold">Estadisticas personalizadas</h2>
-                    <p class="my-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet beatae a
-                        <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet beatae a excepturi.</p>
-                    <a href="#" class="my-4 font-weight-bold atlas-cta cta-blue islands__button">Leer más<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
+                    <h2 class="font-weight-bold">Pronósticos Diarios</h2>
+                    <p class="my-4"> Informate sobres los pronósticos diarios sobre el clima. </p>
+                    <a href="/assets/html/pronostico.html" class="my-4 font-weight-bold atlas-cta cta-blue islands__button">Ver más<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1500" class="col-md-6 align-self-center">
                     <img src="assets/img/img2.png" alt="Take a look inside" class="mx-auto d-block">
@@ -178,12 +98,11 @@
         <div class="container">
             <div class="row justify-content-between text-center text-md-left">
                 <div data-aos="fade-up" data-aos-duration="1000" class="col-md-6 flex-md-last">
-                    <h2 class="font-weight-bold">Todo a la palma de tu mano</h2>
-                    <p class="my-4">
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet beatae a
-                        <br>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet beatae a excepturi.
+                    <h2 class="font-weight-bold text-white">Clima(datos históricos)</h2>
+                    <p class="my-4 text-white">
+                         Informate más sobre el clima y los hechos que acontecieron con el mismo. 
                     </p>
-                    <a href="#" class="my-4 font-weight-bold atlas-cta cta-blue islands__button">Leer más<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
+                    <a href="/assets/html/historicos.html" class="my-4 font-weight-bold atlas-cta cta-blue islands__button">Ver más<i class='bx bx-right-arrow-alt islands__button-icon'></i></a>
 
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1500" class="col-md-6 align-self-center flex-md-first">
@@ -202,32 +121,33 @@
         <div class="container my-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 text-white">
-                    <h2 class="font-weight-bold" data-aos="fade-up" data-aos-duration="1000">Contactanos</h2>
-                    <p class="my-4" data-aos="fade-up" data-aos-duration="1500">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim iure eaque alias,<br> nam facere amet accusamus quisquam laborum aspernatur nostrum unde corporis.
-                    <ul class="list-unstyled" data-aos="fade-up" data-aos-duration="1800">
-                        <li>Email : incyt@hotmail.edu.gt</li>
-                        <li>Phone : +502 2940 3469</li>
-                        <li>Address : Guatemala, Universidad Rafael landívar</li>
+                    <h2 class="font-weight-bold text-black" data-aos="fade-up" data-aos-duration="1000">Contactanos</h2>
+                    <ul class="list-unstyled text-black" data-aos="fade-up" data-aos-duration="1800">
+                        <li>Correo: incyt@url.edu.gt</li>
+                        <li>Universidad Rafael Landívar Campus Central, Vista Hermosa III, Zona 16 Edificio Tec, 5to Nivel</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form action="/assets/php/contact.php" method="POST">
                     	<div class="row">
 	                        <div class="form-group col-md-6">
-	                            <label for="name">Nombre completo</label>
-	                            <input type="name" class="form-control" id="name">
+	                            <label for="name" class="text-black">Nombre completo</label>
+	                            <input name="nombre" type="name" class="form-control" id="name">
 	                        </div>
 	                        <div class="form-group col-md-6">
-	                            <label for="Email">Correo</label>
-	                            <input type="email" class="form-control" id="Email">
+	                            <label for="Email" class="text-black">Correo</label>
+	                            <input name="correo" type="email" class="form-control" id="Email">
+	                        </div>
+	                           <div class="form-group col-md-6">
+	                            <label for="subject" class="text-black">Asunto</label>
+	                            <input name="asunto" type="text" class="form-control" id="subject">
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
-	                        <label for="message">Mensaje</label>
-	                        <textarea class="form-control" id="message" rows="3"></textarea>
+	                        <label for="message" class="text-black">Mensaje</label>
+	                        <textarea name="mensaje" class="form-control" id="message" rows="3"></textarea>
 	                    </div>
-                        <button type="submit" class="islands__button font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Enviar</button>
+                        <input type="submit" value="enviar"class="islands__button font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">
                     </form>
                 </div>
             </div>
@@ -239,43 +159,21 @@
              <section>
                  
                <div id="waterdrop"></div>
-    <footer>
-      <div class="footer-top">
-        <div class="pt-exebar">
-
-        </div>
-        <div class="container">
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-md-9">
-              <div class="footer-site-info"><p>2021© Todos los derechos reservados INCYT </p></div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+            <a href="#"><img src="/assets/img/logo-vrip.png" alt="vrip"></a>
+            <a href="#"><img src="/assets/img/logo-landivar.png" alt="landivar"></a>
             </div>
-            <div class="col-md-3">
-              <div id="footer-socials">
-                <div class="socials inline-inside socials-colored">
-
-                  <a href="#" target="_blank" title="Facebook" class="socials-item">
-                    <i class="fab fa-facebook-f facebook"></i>
-                  </a>
-                  <a href="#" target="_blank" title="Twitter" class="socials-item">
-                    <i class="fab fa-twitter twitter"></i>
-
-                  </a>
-                  <a href="#" target="_blank" title="Instagram" class="socials-item">
-                    <i class="fab fa-instagram instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/assets/html/clima.html">Clima</a></li>
+                <li class="list-inline-item"><a href="/assets/html/nosotros.html">Nosotros</a></li>
+                <li class="list-inline-item"><a href="#">Herramientas</a></li>
+                <li class="list-inline-item"><a href="#">Contacto</a></li>
+            </ul>
+            <p class="copyright">Instituto de Investigación y Proyección sobre Ciencia y Teconolgía - Incyt- 2021</p>
+        </footer>
+    </div>
   
              </section>
               
@@ -320,7 +218,19 @@
 
         </script>
 
- <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
+ <script> jQuery('#waterdrop').raindrops({color:'#003863', canvasHeight:150, density: 0.1, frequency: 20});
 </script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+     
+     <script>
+        
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#main").removeClass("is-loading");
+	}, 100)
+});
+        
+        </script>
+
     </body>
 </html>
