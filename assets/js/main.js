@@ -30,21 +30,6 @@ let galleryTop = new Swiper('.gallery-top', {
 })
 
 
-/*==================== POPUP ====================*/
-const btnOpenVideo = document.querySelectorAll('.islands__video-content')
-const islandsPopup = document.getElementById('popup')
-
-function poPup(){
-    islandsPopup.classList.add('show-popup')
-}
-btnOpenVideo.forEach(b => b.addEventListener('click', poPup))
-
-const btnCloseVideo = document.getElementById('popup-close')
-
-btnCloseVideo.addEventListener('click', ()=> {
-    islandsPopup.classList.remove('show-popup')
-})
-
 /*==================== GSAP ANIMATION ====================*/
 const controlImg = document.querySelectorAll('.controls__img')
 
@@ -59,15 +44,5 @@ function scrollAnimation(){
 }
 
 controlImg.forEach(c => c.addEventListener('click', scrollAnimation)); 
-
-/*=========================Landing page=================================*/
-
-$(document).ready(function() {
-	setTimeout(function() {
-		$("#main").removeClass("is-loading");
-	}, 100)
-});
-
-/*==============================SLDIER DE IMAGENES==========================================*/
 
 
