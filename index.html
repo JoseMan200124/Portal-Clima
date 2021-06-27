@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/assets/img/nublado.png" />
+        
+        <!--========== ICONO DE PESTAÑA ==========-->
+
+        <link rel="shortcut icon" href="/assets/img/logo-pest.png" />
 
         <!--========== BOX ICONS ==========-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -13,17 +16,21 @@
 
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
-            <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+        
+        <!--========== ANIMACIÓN SCROLL ==========-->
 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+        <!--========== TEXTO PESTAÑA ==========-->
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>Incyt</title>
     </head>
-    <body id="contenido">
+    
+    <body id="contenido1">
        <div id="loader"></div>
-        <!--========== HEADER ==========-->
         <header class="header">
             <nav class="nav bd-container">
                <a href="index.html" class="logo-width">
@@ -45,7 +52,6 @@
             </nav>
         </header>
 
-        <!--========== MAIN ==========-->
         <div id="main" class="is-loading">
 	<h1 class="text-white">
 		Universidad Rafael Landívar
@@ -120,14 +126,12 @@
                    <div class="contact-background jumbotron jumbotron-fluid" id="contact">
         <div class="container my-5">
             <div class="row justify-content-between">
-                <div class="col-md-6 text-white">
-                    <h2 class="font-weight-bold text-black" data-aos="fade-up" data-aos-duration="1000">Contactanos</h2>
-                    <ul class="list-unstyled text-black" data-aos="fade-up" data-aos-duration="1800">
-                        <li><br><br>Correo: incyt@url.edu.gt</li>
-                        <li><br>Universidad Rafael Landívar Campus Central, Vista Hermosa III, Zona 16 Edificio Tec, 5to Nivel</li>
-                    </ul>
+                <div class="col-md-6 text-white map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.0753756667!2d-90.48532098550162!3d14.594780681132864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a31955555537%3A0x9c472efd9face66a!2sRafael%20Landivar%20University!5e0!3m2!1sen!2sgt!4v1624757850460!5m2!1sen!2sgt" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-md-6">
+                    <h2 class="font-weight-bold text-black" data-aos="fade-up" data-aos-duration="1000">Contactanos</h2>
+
                     <form action="/assets/php/contact.php" method="POST">
                     	<div class="row">
 	                        <div class="form-group col-md-6">
@@ -177,60 +181,32 @@
   
              </section>
               
-<script>
-      AOS.init({
-      });
-    </script>
+        <!--========== INICIALIZACIÓN EFECTO SCROLL ==========-->
+
+        <script>AOS.init({});</script>
+        
         <!--========== GSAP ==========-->
-        <script src="assets/js/gsap.min.js"></script>
+        <script src="/assets/js/gsap.min.js"></script>
 
         <!--========== SWIPER JS ==========-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="/assets/js/swiper-bundle.min.js"></script>
 
-        <!--========== MAIN JS ==========-->
-        <script src="assets/js/main.js"></script>
+        <!--========== NECESARIO ==========-->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
-  <script>
-        
-  var loader; 
-    function loadNow(opacity){
-        if(opacity<=0){
-            displayContent(); 
-        }
-        else{
-            loader.style.opacity = opacity; 
-            window.setTimeout(function(){
-              loadNow(opacity - 0.05)  
-            }, 100);
-        }
-    }
-    function displayContent(){
-        loader.style.display = 'none'; 
-        document.getElementById('contenido').style.display = 'block';
-    }
-    document.addEventListener("DOMContentLoaded", function(){
-        
-        loader = document.getElementById('loader');
-        loadNow(1); 
-    });
+         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 
-        </script>
+        <!--========== ANIMACION GOTAS DE LLUVIA ==========-->
 
- <script> jQuery('#waterdrop').raindrops({color:'#003863', canvasHeight:150, density: 0.1, frequency: 20});
-</script>
-     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
-     
-     <script>
+        <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+        <script> jQuery('#waterdrop').raindrops({color:'#003863', canvasHeight:150, density: 0.1, frequency: 20});</script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+        <!--========== LOADER ==========-->
+
+        <script src="/assets/js/loader.js"></script>
+        <!--========== MAIN JS ==========-->
         
-        $(document).ready(function() {
-	setTimeout(function() {
-		$("#main").removeClass("is-loading");
-	}, 100)
-});
-        
-        </script>
+        <script src="/assets/js/main.js"></script>
+
 
     </body>
 </html>

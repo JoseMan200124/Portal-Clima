@@ -30,19 +30,124 @@ let galleryTop = new Swiper('.gallery-top', {
 })
 
 
-/*==================== GSAP ANIMATION ====================*/
-const controlImg = document.querySelectorAll('.controls__img')
 
-function scrollAnimation(){
-    gsap.from('.islands__subtitle', {opacity: 0, duration: .2, delay: .2, y: -20})
-    gsap.from('.islands__title', {opacity: 0, duration: .3, delay: .3, y: -20})
-    gsap.from('.islands__description', {opacity: 0, duration: .4, delay: .4, y: -20})
-    gsap.from('.islands__button', {opacity: 0, duration: .5, delay: .5, y: -20})
-    gsap.from('.islands__video-content', {opacity: 0, duration: .6, delay: .6, y: -20})
 
-    islandsPopup.classList.remove('show-popup')
-}
+/*================= Landing page animación ===================*/
 
-controlImg.forEach(c => c.addEventListener('click', scrollAnimation)); 
+     $(document).ready(function() {
+	setTimeout(function() {
+		$("#main").removeClass("is-loading");
+	}, 100)
+});
+
+      $(document).ready(function() {
+	setTimeout(function() {
+		$("#alerta").removeClass("is-loading");
+	}, 100)
+});
+        
+    
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#clima").removeClass("is-loading");
+	}, 100)
+});
+        
+      
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#pronostico").removeClass("is-loading");
+	}, 100)
+});
+        
+    $(document).ready(function() {
+	setTimeout(function() {
+		$("#historico").removeClass("is-loading");
+	}, 100)
+});
+        
+      
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#huracan").removeClass("is-loading");
+	}, 100)
+});
+
+        
+        $(document).ready(function() {
+	setTimeout(function() {
+		$("#nosotros").removeClass("is-loading");
+	}, 100)
+});
+
+   $(document).ready(function() {
+	setTimeout(function() {
+		$("#pronostico").removeClass("is-loading");
+	}, 100)
+});
+
+     $(document).ready(function() {
+	setTimeout(function() {
+		$("#pronosticoEstaciones").removeClass("is-loading");
+	}, 100)
+});
+        
+
+
+/*================== SLIDER DE IMAGENES =======================*/
+
+ var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+
 
 
