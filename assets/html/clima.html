@@ -22,7 +22,7 @@
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>El clima</title>
     </head>
-    <body>
+    <body id="contenido1">
        <div id="loader"></div>
         <!--========== HEADER ==========-->
         <header class="header">
@@ -54,7 +54,7 @@
                        <h2 class="text-center font-weight-bold my-5">Servicios</h2>
 
             <section class="secciones-clima">
-  <h1 class="titulo">Temporada de huracanes</h1>
+  <h2 class="titulo">Temporada de huracanes</h2>
   <div class="contenido">
     <p class="texto-secciones" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum suscipit doloremque, expedita voluptatum maiores corporis modi assumenda esse consectetur error nulla, vero alias.</p><a href="/assets/html/huracanes.html">Saber más</a>
   </div>
@@ -63,7 +63,7 @@
 
      
            <section class="secciones-clima">
-  <h1 class="titulo">Clima (datos historicos)</h1>
+  <h2 class="titulo">Clima (datos historicos)</h2>
   <div class="contenido">
     <p class="texto-secciones" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum suscipit doloremque, expedita voluptatum maiores corporis modi assumenda esse consectetur error nulla, vero alias.</p><a href="/assets/html/historicos.html">Saber más</a>
   </div>
@@ -72,7 +72,7 @@
      
      
            <section class="secciones-clima">
-  <h1 class="titulo">Pronósticos Diarios</h1>
+  <h2 class="titulo">Pronósticos Diarios</h2>
   <div class="contenido">
     <p class="texto-secciones" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum suscipit doloremque, expedita voluptatum maiores corporis modi assumenda esse consectetur error nulla, vero alias.</p><a href="/assets/html/pronostico.html">Saber más</a>
   </div>
@@ -80,7 +80,7 @@
 </section>
      
            <section class="secciones-clima">
-  <h1 class="titulo">Pronósticos Estaciones</h1>
+  <h2 class="titulo">Pronósticos Estaciones</h2>
   <div class="contenido">
     <p class="texto-secciones" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum suscipit doloremque, expedita voluptatum maiores corporis modi assumenda esse consectetur error nulla, vero alias.</p><a href="/assets/html/pronosticoEstaciones.html">Saber más</a>
   </div>
@@ -88,7 +88,7 @@
 </section>
      
            <section class="secciones-clima">
-  <h1 class="titulo">Alerta temprana</h1>
+  <h2 class="titulo">Alerta temprana</h2>
   <div class="contenido">
     <p class="texto-secciones" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum suscipit doloremque, expedita voluptatum maiores corporis modi assumenda esse consectetur error nulla, vero alias.</p><a href="/assets/html/alertaTemprana.html">Saber más</a>
   </div>
@@ -150,7 +150,7 @@
     }
     function displayContent(){
         loader.style.display = 'none'; 
-        document.getElementById('content').style.display = 'block';
+        document.getElementById('contenido1').style.display = 'block';
     }
     document.addEventListener("DOMContentLoaded", function(){
         
@@ -173,59 +173,5 @@
 });
         
         </script>
-           <script type="text/javascript">
-    var slides = document.querySelectorAll('.slide');
-    var btns = document.querySelectorAll('.btn');
-    let currentSlide = 1;
-
-    // Javascript for image slider manual navigation
-    var manualNav = function(manual){
-      slides.forEach((slide) => {
-        slide.classList.remove('active');
-
-        btns.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-      });
-
-      slides[manual].classList.add('active');
-      btns[manual].classList.add('active');
-    }
-
-    btns.forEach((btn, i) => {
-      btn.addEventListener("click", () => {
-        manualNav(i);
-        currentSlide = i;
-      });
-    });
-
-    // Javascript for image slider autoplay navigation
-    var repeat = function(activeClass){
-      let active = document.getElementsByClassName('active');
-      let i = 1;
-
-      var repeater = () => {
-        setTimeout(function(){
-          [...active].forEach((activeSlide) => {
-            activeSlide.classList.remove('active');
-          });
-
-        slides[i].classList.add('active');
-        btns[i].classList.add('active');
-        i++;
-
-        if(slides.length == i){
-          i = 0;
-        }
-        if(i >= slides.length){
-          return;
-        }
-        repeater();
-      }, 10000);
-      }
-      repeater();
-    }
-    repeat();
-    </script>
-    </body>
+     </body>
 </html>
