@@ -19,6 +19,10 @@
 
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<script src="https://use.fontawesome.com/20ab91acc4.js"></script>
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>El clima</title>
     </head>
@@ -34,7 +38,7 @@
                 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                           <li class="nav__item"><a href="/index.html" class="nav__link">Inicio</a></li>
+                          <li class="nav__item"><a href="/index.html" class="nav__link">Inicio</a></li>
                         <li class="nav__item"><a href="/assets/html/clima.html" class="nav__link">Clima</a></li>
                         <li class="nav__item"><a href="/assets/html/nosotros.html" class="nav__link">Nosotros</a></li>
                         <li class="nav__item"><a href="/assets/html/contacto.html" class="nav__link">Contactanos</a></li>
@@ -46,34 +50,23 @@
                 </div>
             </nav>
         </header>
-             <div id="huracan" class="is-loading">
-	<h1 class="text-white">
-		Temporada de huracanes
-	</h1>
-</div>
-                       <h2 class="text-center font-weight-bold my-5">Imagenes</h2>
-
-
-        <section class="slider-container">
-    <div class="img-slider">
-      <div class="slide active">
-        <img src="/assets/img/slide1.png" alt="">
-      </div>
-      <div class="slide">
-        <img src="/assets/img/slide2.png" alt="">
-      </div>
-      <div class="slide">
-        <img src="/assets/img/slide3.png" alt="">
-      </div>
-      <div class="navigation">
-        <div class="btn btn-tam active"></div>
-        <div class="btn btn-tam"></div>
-        <div class="btn btn-tam"></div>
      
+  <section class="contacto">
+     <div class="contact-in">
+      <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.0753756667!2d-90.48532098550162!3d14.594780681132864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a31955555537%3A0x9c472efd9face66a!2sRafael%20Landivar%20University!5e0!3m2!1sen!2sgt!4v1624757850460!5m2!1sen!2sgt" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-</div>
-             </section>
-  
+      <div class="contact-form">
+      <h2>Contactanos</h2>
+        <form action="">
+            <input type="text" placeholder="Nombre" class="contact-form-txt"/>
+            <input type="text" placeholder="Correo" class="contact-form-txt"/>
+            <textarea placeholder="Mensaje" class="contact-form-textarea"></textarea>
+            <input type="submit" name="Submit" class="contact-form-btn"/>
+        </form> 
+        </div>     
+  </div>
+  </section>
   <section>
                  
                <div id="waterdrop"></div>
@@ -146,7 +139,7 @@
         
         $(document).ready(function() {
 	setTimeout(function() {
-		$("#huracan").removeClass("is-loading");
+		$("#pronostico").removeClass("is-loading");
 	}, 100)
 });
         
@@ -205,5 +198,7 @@
     }
     repeat();
     </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     </body>
 </html>
