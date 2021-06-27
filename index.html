@@ -21,7 +21,7 @@
        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>Incyt</title>
     </head>
-    <body>
+    <body id="contenido">
        <div id="loader"></div>
         <!--========== HEADER ==========-->
         <header class="header">
@@ -208,7 +208,7 @@
     }
     function displayContent(){
         loader.style.display = 'none'; 
-        document.getElementById('content').style.display = 'block';
+        document.getElementById('contenido').style.display = 'block';
     }
     document.addEventListener("DOMContentLoaded", function(){
         
