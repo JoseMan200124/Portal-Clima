@@ -1065,6 +1065,12 @@ h1:after {
     width: 400px;
     height: 250px;
   }
+    .titulo {
+  font-size: 2em!important;
+  margin: 0 0 1rem;
+  font-family: serif;
+  position: relative;
+}
 
   .img-slider .slide .info{
     padding: 10px 20px;
@@ -1434,15 +1440,7 @@ body.single-toggle .drop:nth-child(10) {
   font-family: serif;
   position: relative;
 }
-.titulo::after {
-  content: '';
-  position: absolute;
-  width: 6rem;
-  background-color: #ccc;
-  height: 2px;
-  top: 0;
-  left: 0;
-}
+
 @media (min-width: 40em) {
   .titulo::after {
     left: var(--box-x-padding);
